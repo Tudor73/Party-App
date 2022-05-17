@@ -26,7 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
         android:layout_marginEnd="36dp"
-        android:text="Create Party"
+        android:text="/Create Party"
+        android:onClick="handleCreatePartyClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
