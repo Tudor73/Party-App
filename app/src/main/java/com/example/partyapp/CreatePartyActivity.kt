@@ -22,7 +22,6 @@ class CreatePartyActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_party)
-        println("activity loaded")
     }
 
     fun showDatePicker(view: View) {
