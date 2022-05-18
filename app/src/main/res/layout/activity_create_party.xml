@@ -34,7 +34,7 @@
 
 
     <EditText
-        android:id="@+id/adressInput"
+        android:id="@+id/addressInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -91,10 +91,8 @@
         android:clickable="true"
         android:focusable="true"
         android:onClick="showDatePicker"
-        app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintStart_toEndOf="@+id/Date"
-        app:layout_constraintTop_toTopOf="@+id/adressInput"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintTop_toTopOf="@+id/addressInput"
         app:srcCompat="@android:drawable/ic_menu_my_calendar"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -107,16 +105,5 @@
         android:text=""
         app:layout_constraintBottom_toBottomOf="@+id/floatingActionButton"
         app:layout_constraintStart_toEndOf="@+id/floatingActionButton" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="43dp"
-        android:clickable="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/floatingActionButton"
-        app:srcCompat="@android:drawable/ic_menu_my_calendar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

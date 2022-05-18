@@ -45,7 +45,7 @@ class CreatePartyActivity : AppCompatActivity() {
     fun submitParty(view : View) {
 
         this.partyName = findViewById<TextView>(R.id.nameInput).text.toString()
-        this.partyAddress = findViewById<TextView>(R.id.adressInput).text.toString()
+        this.partyAddress = findViewById<TextView>(R.id.addressInput).text.toString()
 
         if(this.partyName == "") {
             Toast.makeText(this,"Enter party name", Toast.LENGTH_SHORT).show()
