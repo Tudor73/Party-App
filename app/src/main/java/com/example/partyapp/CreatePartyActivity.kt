@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class CreatePartyActivity : AppCompatActivity() {
-    val dateFormat = SimpleDateFormat("dd-MM-yyyy")
+    private val dateFormat = SimpleDateFormat("dd-MM-yyyy")
     var date : Date? = Date()
     var partyName : String = ""
     var partyAddress : String = ""
@@ -46,7 +46,7 @@ class CreatePartyActivity : AppCompatActivity() {
     fun submitParty(view : View) {
 
         this.partyName = findViewById<TextView>(R.id.nameInput).text.toString()
-        this.partyAddress = findViewById<TextView>(R.id.adressInput).text.toString()
+        this.partyAddress = findViewById<TextView>(R.id.addressInput).text.toString()
 
         if(this.partyName == "") {
             Toast.makeText(this,"Enter party name", Toast.LENGTH_SHORT).show()
@@ -59,7 +59,8 @@ class CreatePartyActivity : AppCompatActivity() {
             Toast.makeText(this,"Select date", Toast.LENGTH_SHORT).show()
         }
         else {
-            var newParty = Party(1,this.partyName)
+            var newParty = Party(this.partyName)
+            print(newParty.id)
             newParty.addInvitation("asdasdas")
         }
     }
