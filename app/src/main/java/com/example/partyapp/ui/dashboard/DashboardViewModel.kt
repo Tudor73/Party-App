@@ -1,4 +1,4 @@
-package com.example.partyapp.ui.parties
+package com.example.partyapp.ui.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

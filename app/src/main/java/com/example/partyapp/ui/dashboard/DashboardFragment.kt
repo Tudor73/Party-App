@@ -1,19 +1,15 @@
-package com.example.partyapp.ui.parties
+package com.example.partyapp.ui.dashboard
 
 import android.animation.ObjectAnimator
 import android.os.Bundle
-import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
-import androidx.core.animation.doOnEnd
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.partyapp.databinding.FragmentDashboardBinding
-import kotlin.concurrent.timer
 
 class DashboardFragment : Fragment() {
 

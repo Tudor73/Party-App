@@ -1,6 +1,8 @@
 package com.example.partyapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -8,7 +10,6 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.partyapp.databinding.ActivityMainBinding
-import com.example.partyapp.ui.parties.DashboardFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,4 +35,11 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
+    fun handleCreatePartyClick(view: View) {
+        startActivity(Intent(this, CreatePartyActivity::class.java))
+    }
+
+
+
 }
