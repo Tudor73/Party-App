@@ -10,14 +10,20 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.example.partyapp.data.Party
+import com.example.partyapp.data.User
+import com.example.partyapp.repositories.PartyRepository
+import com.example.partyapp.repositories.UserRepository
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.ZoneId
 import java.util.*
 
 class CreatePartyActivity : AppCompatActivity() {
     val dateFormat = SimpleDateFormat("dd-MM-yyyy")
-    var date : Date? = Date()
-    var partyName : String = ""
-    var partyAddress : String = ""
+    var date : String = ""
+    var partyTitle: String = ""
+    var partyAddress: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,36 +37,45 @@ class CreatePartyActivity : AppCompatActivity() {
             DatePickerDialog.OnDateSetListener{view, year, monthOfYear, dayOfMonth ->
                 val dateSelected = Calendar.getInstance()
                 dateSelected.set(year, monthOfYear, dayOfMonth)
-                val formatedDate : String = this.dateFormat.format(dateSelected.time)
+
+                val formattedDate : String = this.dateFormat.format(dateSelected.time)
                 val dateTextView : TextView = findViewById(R.id.dateTextView)
-                dateTextView.text = formatedDate
-                this.date = this.dateFormat.parse(formatedDate)
+                dateTextView.text = formattedDate
+                date = formattedDate
             },
+
             today.get(Calendar.YEAR),
             today.get(Calendar.MONTH),
             today.get(Calendar.DAY_OF_MONTH)
+
         )
             datePickerDialog.show()
     }
     fun submitParty(view : View) {
 
-        this.partyName = findViewById<TextView>(R.id.nameInput).text.toString()
-        this.partyAddress = findViewById<TextView>(R.id.addressInput).text.toString()
+        lateinit var newParty: Party
 
-        if(this.partyName == "") {
-            Toast.makeText(this,"Enter party name", Toast.LENGTH_SHORT).show()
+        partyTitle = findViewById<TextView>(R.id.nameInput).text.toString()
+        partyAddress = findViewById<TextView>(R.id.addressInput).text.toString()
+
+        if(partyTitle == "") {
+            Toast.makeText(this,"Enter party title", Toast.LENGTH_SHORT).show()
 
         }
-        else if(this.partyAddress == "") {
+        else if(partyAddress == "") {
             Toast.makeText(this,"Enter party address", Toast.LENGTH_SHORT).show()
         }
-        else if(this.date == Date()) {
+        else if(this.date == "") {
             Toast.makeText(this,"Select date", Toast.LENGTH_SHORT).show()
         }
         else {
-            var newParty = Party(1,this.partyName)
-            newParty.addInvitation("asdasdas")
+            newParty= Party(partyTitle, partyAddress, this.date, "anon")
+            val pr = PartyRepository()
+            pr.createParty(newParty)
+            Toast.makeText(this, "Party created successfully!", Toast.LENGTH_LONG).show()
         }
+
+
     }
 
      override fun onBackPressed() {

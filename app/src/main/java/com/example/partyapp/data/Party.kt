@@ -1,15 +1,20 @@
 package com.example.partyapp.data
 
+import java.time.LocalDate
+import java.time.LocalDateTime
+
 
 data class Party(
-    val id : Int,
-    var name : String = "",
-    private val invites : ArrayList<String> = ArrayList<String>(),
+    var title : String,
+    var address: String,
+    var date: String,
+    var organizer: String,
+    private val invites : ArrayList<User> = ArrayList<User>(),
     private val shoppingList: HashMap<String, Int> = HashMap<String, Int>()
 
 ){
 
-    fun addInvitation(person : String) {
+    fun addInvitation(person : User) {
         this.invites.add(person)
     }
 
