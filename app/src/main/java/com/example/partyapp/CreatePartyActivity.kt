@@ -69,7 +69,8 @@ class CreatePartyActivity : AppCompatActivity() {
             Toast.makeText(this,"Select date", Toast.LENGTH_SHORT).show()
         }
         else {
-            newParty= Party(partyTitle, partyAddress, this.date, "anon")
+            var newUser = User("tudor", "t")
+            newParty= Party(partyTitle, partyAddress, this.date, newUser)
             val pr = PartyRepository()
             pr.createParty(newParty)
             Toast.makeText(this, "Party created successfully!", Toast.LENGTH_LONG).show()

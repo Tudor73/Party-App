@@ -5,10 +5,10 @@ import java.time.LocalDateTime
 
 
 data class Party(
-    var title : String,
-    var address: String,
-    var date: String,
-    var organizer: String,
+    var title : String = "",
+    var address: String = "",
+    var date: String = "",
+    var organizer: User = User("", ""),
     private val invites : ArrayList<User> = ArrayList<User>(),
     private val shoppingList: HashMap<String, Int> = HashMap<String, Int>()
 

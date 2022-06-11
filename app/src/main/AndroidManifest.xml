@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PartyApp">
-
+        <activity
+            android:name=".ui.UserFeedActivity"
+            android:exported="false"
+            android:label="@string/title_activity_user_feed"
+            android:theme="@style/Theme.PartyApp.NoActionBar" />
         <activity
             android:name=".CreatePartyActivity"
             android:exported="false" />
