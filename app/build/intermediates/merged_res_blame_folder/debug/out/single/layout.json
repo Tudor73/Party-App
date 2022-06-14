@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\deStersPartyApp\\Party-App-firebase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_create_party.xml",
+        "source": "D:\\deStersPartyApp\\Party-App-firebase\\app\\src\\main\\res\\layout\\activity_create_party.xml"
+    },
+    {
+        "merged": "D:\\deStersPartyApp\\Party-App-firebase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "D:\\deStersPartyApp\\Party-App-firebase\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "D:\\deStersPartyApp\\Party-App-firebase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_notifications.xml",
+        "source": "D:\\deStersPartyApp\\Party-App-firebase\\app\\src\\main\\res\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "D:\\deStersPartyApp\\Party-App-firebase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_dashboard.xml",
+        "source": "D:\\deStersPartyApp\\Party-App-firebase\\app\\src\\main\\res\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "D:\\deStersPartyApp\\Party-App-firebase\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_home.xml",
+        "source": "D:\\deStersPartyApp\\Party-App-firebase\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    }
+]
