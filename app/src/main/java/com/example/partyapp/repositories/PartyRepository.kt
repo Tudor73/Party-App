@@ -15,26 +15,6 @@ class PartyRepository: FirebaseSetup() {
         reference.child(newParty.title).setValue(newParty)
     }
 
-    fun getParties(partyCallback: PartyListCallback): ArrayList<Party>{
-        var partiesList: ArrayList<Party> = ArrayList()
-        reference.addListenerForSingleValueEvent(object: ValueEventListener{
-            override fun onDataChange(snapshot: DataSnapshot) {
-                val partyType = object:GenericTypeIndicator<HashMap<String, Party>>(){}
-                val partyMap: HashMap<String, Party>? = snapshot.getValue(partyType)
-
-                if (partyMap != null) {
-                    partiesList = partyCallback.onCallback(partyMap.values as ArrayList<Party>)
-                }
-            }
-
-
-            override fun onCancelled(dbError: DatabaseError) {
-                Log.w(TAG, "loadParties:onCancelled", dbError.toException())
-            }
-        })
-        return partiesList
-    }
-
 interface PartyListCallback{
     fun onCallback(parties: ArrayList<Party>): ArrayList<Party>
 }
