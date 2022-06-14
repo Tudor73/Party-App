@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "358564940860",
+    "firebase_url": "https://partyapp-646ef-default-rtdb.europe-west1.firebasedatabase.app",
     "project_id": "partyapp-646ef",
     "storage_bucket": "partyapp-646ef.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "358564940860-s3spub2a007tbkmqgm948gl63eaofb7q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.partyapp",
+            "certificate_hash": "6d706ff9c16502cca770c8dc3e53284f3c89ba95"
+          }
+        },
         {
           "client_id": "358564940860-u36ll21q259v726ds7tsk44au8ta7ejo.apps.googleusercontent.com",
           "client_type": 3

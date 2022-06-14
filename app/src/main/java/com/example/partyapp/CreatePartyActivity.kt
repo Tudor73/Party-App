@@ -82,6 +82,4 @@ class CreatePartyActivity : AppCompatActivity() {
         super.onBackPressed();
         this.finish();
     }
-
-
 }
