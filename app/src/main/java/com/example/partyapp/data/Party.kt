@@ -8,7 +8,7 @@ data class Party(
     var title : String,
     var address: String,
     var date: String,
-    var organizer: String,
+    var organizer: User,
     private val invites : ArrayList<User> = ArrayList<User>(),
     private val shoppingList: HashMap<String, Int> = HashMap<String, Int>()
 
