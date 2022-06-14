@@ -1,5 +1,6 @@
 package com.example.partyapp
 
+import android.app.PendingIntent.getActivity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -11,11 +12,12 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.partyapp.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-
+    private lateinit var auth : FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -32,15 +34,21 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications
             )
         )
-
+        auth = FirebaseAuth.getInstance()
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
     }
 
     fun handleCreatePartyClick(view: View) {
         startActivity(Intent(this, CreatePartyActivity::class.java))
     }
 
-
+    fun handleSignOutClick(view: View) {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        auth.signOut()
+        finish()
+    }
 
 }
