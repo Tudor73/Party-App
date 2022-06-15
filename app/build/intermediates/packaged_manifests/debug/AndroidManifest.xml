@@ -25,6 +25,11 @@
         android:testOnly="true"
         android:theme="@style/Theme.PartyApp" >
         <activity
+            android:name="com.example.partyapp.ViewPartyActivity"
+            android:exported="false"
+            android:label="@string/title_activity_view_party"
+            android:theme="@style/Theme.PartyApp.NoActionBar" />
+        <activity
             android:name="com.example.partyapp.ui.UserFeedActivity"
             android:exported="false"
             android:label="@string/title_activity_user_feed"
@@ -53,58 +58,19 @@
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 
         <activity
-            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"
             android:exported="true"
             android:launchMode="singleTask"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="firebase.auth"
-                    android:path="/"
-                    android:scheme="genericidp" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-            android:excludeFromRecents="true"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data
-                    android:host="firebase.auth"
-                    android:path="/"
-                    android:scheme="recaptcha" />
-            </intent-filter>
-        </activity>
+            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
             android:authorities="com.example.partyapp.firebaseinitprovider"
-            android:directBootAware="true"
             android:exported="false"
             android:initOrder="100" />
 

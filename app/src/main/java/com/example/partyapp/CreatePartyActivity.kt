@@ -60,7 +60,6 @@ class CreatePartyActivity : AppCompatActivity() {
 
         if(partyTitle == "") {
             Toast.makeText(this,"Enter party title", Toast.LENGTH_SHORT).show()
-
         }
         else if(partyAddress == "") {
             Toast.makeText(this,"Enter party address", Toast.LENGTH_SHORT).show()
@@ -75,8 +74,6 @@ class CreatePartyActivity : AppCompatActivity() {
             pr.createParty(newParty)
             Toast.makeText(this, "Party created successfully!", Toast.LENGTH_LONG).show()
         }
-
-
     }
 
      override fun onBackPressed() {

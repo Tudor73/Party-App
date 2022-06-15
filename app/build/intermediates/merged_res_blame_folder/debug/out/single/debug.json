@@ -4,6 +4,10 @@
         "source": "D:\\deStersPartyApp\\Party-App-firebase\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "D:\\deStersPartyApp\\Party-App-firebase\\app\\build\\intermediates\\merged_res\\debug\\navigation_nav_graph.xml.flat",
+        "source": "D:\\deStersPartyApp\\Party-App-firebase\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+    },
+    {
         "merged": "D:\\deStersPartyApp\\Party-App-firebase\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "D:\\deStersPartyApp\\Party-App-firebase\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
@@ -50,6 +54,10 @@
     {
         "merged": "D:\\deStersPartyApp\\Party-App-firebase\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_notifications_black_24dp.xml.flat",
         "source": "D:\\deStersPartyApp\\Party-App-firebase\\app\\src\\main\\res\\drawable\\ic_notifications_black_24dp.xml"
+    },
+    {
+        "merged": "D:\\deStersPartyApp\\Party-App-firebase\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_view_party.xml.flat",
+        "source": "D:\\deStersPartyApp\\Party-App-firebase\\app\\src\\main\\res\\layout\\activity_view_party.xml"
     },
     {
         "merged": "D:\\deStersPartyApp\\Party-App-firebase\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_user_feed.xml.flat",

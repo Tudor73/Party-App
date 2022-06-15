@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PartyApp">
         <activity
+            android:name=".ViewPartyActivity"
+            android:exported="false"
+            android:label="@string/title_activity_view_party"
+            android:theme="@style/Theme.PartyApp.NoActionBar" />
+        <activity
             android:name=".ui.UserFeedActivity"
             android:exported="false"
             android:label="@string/title_activity_user_feed"
