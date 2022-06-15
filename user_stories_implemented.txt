@@ -1,0 +1,19 @@
+As an organizer, I want to invite my friends to the party
+
+As an organizer, I would like to send my friends the party details
+
+As an organizer, I want to create parties
+
+As an user, I would like to login with my Google account
+
+As an organizer, I would like to send invitations to my friends
+
+As a participant, I would like to see all the details and parties
+
+As a participant, I would like to receive invitations from parties
+
+As an user, I would like to see the gatherings near me
+
+As an organizer, I would like to set a location for the event
+
+As a participant, I would like to see the location of the party on Google Maps
